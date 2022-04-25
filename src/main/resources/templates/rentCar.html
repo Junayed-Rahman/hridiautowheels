@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"  th:replace="base::layout(~{::section})">
+ <head>
+     <meta charset="UTF-8">
+    <title>HOME</title>
+ </head>
+ <body>
+ <section>
+     <h3 class="text-center">Rent Cars</h3>
+     <div class="row mt-1">
+<!-- show categories-->
+
+         <div class="col-md-2 mt-5">
+             <div class="list-group ">
+                 <a href="#" class="list-group-item list-group-item-action active custom-bg" aria-current="true">
+                     All Categories
+                 </a>
+                 <th:block th:each="category: ${categoryList}">
+                     <a  th:href= "@{/category(id=${category.id})}" th:text="${category.title}" th:value="${category.id}"
+                        class="list-group-item list-group-item-action">
+                     </a>
+                 </th:block>
+             </div>
+         </div>
+
+
+<!--show products-->
+
+         <div class="col-md-10">
+
+             <div class="row mt-4">
+                 <div class="col-md-12">
+                     <div class="card-columns">
+                         <th:block th:each="car : ${carList}">
+                             <div class="card d-inline-flex" style="margin: 1%;width: 30%">
+                                 <div class="container text-center">
+                                     <img  class="card-img-top m-2" style="max-height: 200px;max-width: 100%;width: auto"
+                                          th:src="@{'/images/'+${car.imageURL}}"
+                                           alt="product">
+
+                                 </div>
+                                 <div class="card-body">
+                                     <h5 class="card-title" th:text="${car.name}">null Product Name</h5>
+                                     <p class="card-text" th:text="${car.description}">
+                                     </p>
+                                 </div>
+                                 <div class="footer">
+                                     <button class="btn custom-bg text-white"
+                                             th:pid="${car.id}" th:pname="${car.name}" th:price="${car.price}"
+                                               onclick="addToCart(this.getAttribute('pid'),this.getAttribute('pname'),this.getAttribute('price'))">
+<!--                                             th:onclick="'addToCart('+${product.id}+','+${product.name}+','+${product.price}+')'"-->
+                                              Rent</button>
+                                     <button class="btn btn-outline-primary" th:text="${car.price}">null price</button>
+                                 </div>
+                             </div>
+                         </th:block>
+
+                     </div>
+
+
+                 </div>
+             </div>
+
+
+
+         </div>
+     </div>
+ </section>
+
+ </body>
+</html>

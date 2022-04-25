@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card mt-3">
+                    <div class="card-header custom-bg text-white">
+                        <h3>Login here</h3>
+                    </div>
+                    <div class="card-body">
+                        <div th:if="${session.msg}" th:replace="message::message1"></div>
+                        <form th:action="@{/loginHandler}" method="post">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email"
+                                       aria-describedby="emailHelp" name="email" required>
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password"
+                                       name="password" required>
+                            </div>
+                            <a th:href="@{/signup}">If not registered click here!</a>
+                            <div class="container text-center">
+                                <button type="submit" class="btn btn-primary custom-bg">Submit</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="card-footer">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<section>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 mt-3">
+                <div class="card px-5">
+                    <div th:if="${session.msg}" th:replace="message::message1"></div>
+                    <div class="card-body">
+                        <img th:src="@{/images/registration.png}" style="width: 10%;margin-left: 45%">
+
+                        <h3 class="text-center my-3"> Sign Up Here!!</h3>
+                        <form th:action="@{/registerHandler}" method="post">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">User Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter here" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">User Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter here" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">User Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">User Phone</label>
+                                <input type="number" class="form-control" id="phone" name="phoneNumber" placeholder="Enter here">
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">User Address</label>
+                                <textarea class="form-control" id="address" rows="3" placeholder="Enter here" name="userAddress"></textarea>
+                            </div>
+                            <div class="container text-center">
+                                <button type="submit" class="btn btn-outline-success custom-bg">Submit</button>
+                                <button type="reset" class="btn btn-outline-warning custom-bg">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

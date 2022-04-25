@@ -1,0 +1,118 @@
+/*********************************leisure activity***************************/
+
+.hobby {
+    text-align: left;
+    padding-left: 7vh;
+    font-size: 30px;
+    color: rgb(242, 242, 243);;
+}
+
+/*.leisure {
+    background-image: url('../images/img31.jpg');
+    padding-top: 20px;
+    text-align: center;   
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}*/
+
+.leisure{
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #205A81, #6DD5FA, #FFFFFF );  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,#205A81  , #6DD5FA, #FFFFFF ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background-image: url('../images/7.jpg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-blend-mode: soft-light;
+    height: 60vh;
+    opacity: 1;
+}
+
+section .bottom-content{
+    display: flex;
+    justify-content: space-around;
+  
+}
+
+.headers {
+    font-size: 70px;
+    font-family: 'Cinzel Decorative', cursive;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.botton-content-one:hover, .botton-content-two:hover, .botton-content-three:hover, .botton-content-four:hover, .botton-content-five:hover{
+    font-family: 'Russo One', sans-serif;
+}
+  
+section .bottom-content .botton-content-one, .botton-content-two, .botton-content-three, .botton-content-four, .botton-content-five{
+    height: 10rem;
+    width: 20rem;
+    margin: 1rem;
+    margin-top: 2rem;
+  
+}
+  
+section  .botton-content-one:hover, .botton-content-two:hover, .botton-content-three:hover, .botton-content-four:hover, .botton-content-five:hover{
+    transform: translateY(-1rem);
+    transition: 0.7s;
+}
+
+section .bottom-content .botton-content-one, .botton-content-one h1{
+    background-color: #ffffff07;
+}
+
+section .bottom-content .botton-content-two, .botton-content-two h1{
+    background-color: #fcfcfc00;
+}
+
+section .bottom-content .botton-content-three, .botton-content-three h1{
+    background-color: #ffffff00;
+}
+
+section .bottom-content .botton-content-four, .botton-content-four h1{
+    background-color: #fcfcfc00;
+}
+
+section .bottom-content .botton-content-five, .botton-content-five h1{
+    background-color: #fafafa00;
+}
+
+.image-one img, .image-two img, .image-three img, .image-four img, .image-five img{
+    width: 100%;
+    height: 15rem;
+}
+
+.words{
+  width: 100%;
+}
+
+.botton-content-one .words p{
+  background-color: #050405;
+}
+
+.botton-content-two .words p{
+  background-color: #000000;
+}
+
+.botton-content-three .words p{
+  background-color: #000000;
+}
+
+.botton-content-four .words p{
+    background-color: #000000;
+}
+
+.botton-content-five .words p{
+    background-color: #000000;
+}
+
+
+div > h1 > a {
+    text-decoration: none;
+    color: rgb(51, 38, 129);
+}
